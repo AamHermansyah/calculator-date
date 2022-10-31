@@ -1,14 +1,44 @@
 body {
     font-family: monospace, sans-serif;
-    background-color: #eaeaea;
+    background: rgb(44, 44, 44);
     padding: 20px;
     margin: 0;
     color: white;
 }
 
 body.darkmode {
-    background: rgb(22, 22, 22);
+    background: rgb(193, 193, 193);
     color: rgb(22, 22, 22);
+}
+
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+body::before {
+    width: 150px;
+    height: 150px;
+    left: 40vmin;
+    filter: blur(200px);
+    background: red;
+}
+
+body::after {
+    width: 300px;
+    height: 300px;
+    right: 40vmin;
+    bottom: 100px;
+    z-index: -1;
+    filter: blur(250px);
+    background: blue;
+}
+
+@media (max-width: 450px){
+    body {
+        padding: 0;
+    }
 }
 
 section {
@@ -17,14 +47,25 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-rows: 1fr max-content;
-    background: rgb(22, 22, 22);
+    background: rgb(27, 27, 27);
     min-height: 93vh;
     border-radius: 20px;
     overflow: hidden;
+    -webkit-box-shadow: 0px 10px 79px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 79px -23px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 79px -23px rgba(0,0,0,0.75);
 }
 
 body.darkmode section {
     background: #fff;   
+}
+
+@media (max-width: 450px){
+    section {
+        grid-template-rows: 1fr 2fr;
+        width: 100%;
+        height: 100vh;
+    }
 }
 
 .mode {
@@ -74,7 +115,8 @@ body.darkmode .input-user {
 }
 
 .grid-col-4 {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(40px, 80px));
     justify-content: center;
     gap: 10px;
 }
@@ -82,8 +124,7 @@ body.darkmode .input-user {
 .grid-col-4 > * {
     text-align: center;
     background-color: rgb(24, 24, 24);
-    width: 60px;
-    height: 60px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +156,7 @@ body.darkmode .grid-col-4 > *:hover {
 }
 
 .span-2 {
-    width: 130px;
+    grid-column: span 2;
 }
 
 .clear {
