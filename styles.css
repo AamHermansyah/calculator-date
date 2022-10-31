@@ -1,0 +1,143 @@
+body {
+    font-family: monospace, sans-serif;
+    background-color: #eaeaea;
+    padding: 20px;
+    margin: 0;
+    color: white;
+}
+
+body.darkmode {
+    background: rgb(22, 22, 22);
+    color: rgb(22, 22, 22);
+}
+
+section {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    background: rgb(22, 22, 22);
+    min-height: 93vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+body.darkmode section {
+    background: #fff;   
+}
+
+.mode {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.operasi-hasil {
+    align-self: end;
+    text-align: right;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.hasil {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+sup {
+    font-size: 1rem;
+    color: rgb(216, 230, 17);
+}
+
+body.darkmode sup {
+    color: rgb(35, 151, 37);
+}
+
+.input-user {
+    background-color: #222;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+body.darkmode .input-user {
+    background-color: rgb(229, 229, 229);
+}
+
+.grid-col-4 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grid-col-4 > * {
+    text-align: center;
+    background-color: rgb(24, 24, 24);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms;
+    user-select: none;
+    font-weight: bold;
+}
+
+body.darkmode .grid-col-4 > * {
+    background-color: rgb(206, 206, 206);
+}
+
+.grid-col-4 > *:hover {
+    background-color: rgb(21, 26, 33);
+}
+
+body.darkmode .grid-col-4 > *:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+.text-lg {
+    font-size: 1.5rem;
+}
+
+.text-xl {
+    font-size: 2rem;
+}
+
+.span-2 {
+    width: 130px;
+}
+
+.clear {
+    color: rgb(230, 17, 53);
+}
+
+body.darkmode .clear {
+    color: rgb(187, 15, 43);
+}
+
+.text-blue {
+    color: rgb(33, 173, 228);
+}
+
+body.darkmode .text-blue {
+    color: rgb(28, 26, 152);
+}
+
+.text-yellow {
+    color: rgb(216, 230, 17);
+}
+
+body.darkmode .text-yellow {
+    color: rgb(35, 151, 37);
+}

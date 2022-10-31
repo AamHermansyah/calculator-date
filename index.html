@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="mode">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+            </svg>
+        </div>
+        <div class="operasi-hasil">
+            <div class="hasil"></div>
+            <div class="operasi">
+                <span id="number">0</span>
+                <span id="time" class="text-blue">Days</span><sup id="type-time">Past</sup>
+            </div>
+        </div>
+        <div class="input-user">
+            <div class="grid-col-4">
+                <div data-number="7" class="input-number text-lg">7</div>
+                <div data-number="8" class="input-number text-lg">8</div>
+                <div data-number="9" class="input-number text-lg">9</div>
+                <div id="delete" class="clear">DEL</div>
+            </div>
+            <div class="grid-col-4">
+                <div data-number="4" class="input-number text-lg">4</div>
+                <div data-number="5" class="input-number text-lg">5</div>
+                <div data-number="6" class="input-number text-lg">6</div>
+                <div data-time="Years" class="time text-blue">Year</div>
+            </div>
+            <div class="grid-col-4">
+                <div data-number="1" class="input-number text-lg">1</div>
+                <div data-number="2" class="input-number text-lg">2</div>
+                <div data-number="3" class="input-number text-lg">3</div>
+                <div data-time="Days" class="time text-blue">Day</div>
+            </div>
+            <div class="grid-col-4">
+                <div data-typeTime="Past" class="type-time text-yellow">Past</div>
+                <div data-number="0" class="input-number text-lg">0</div>
+                <div data-time="Months" class="time span-2 text-blue">Month</div>
+            </div>
+            <div class="grid-col-4">
+                <div data-typeTime="Future" class="type-time span-2 text-yellow">Future</div>
+                <div id="clear" class="clear text-lg">C</div>
+                <div id="output" class="text-xl">=</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
