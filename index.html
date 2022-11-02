@@ -9,7 +9,15 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <section>
+    <!-- calculator 1 -->
+    <section class="documentation">
+        <h1>CALCULATOR TO FIND DATE</h1>
+        <h2>Max Day = 18250 days</h2>
+        <h2>Max Month = 600 Months</h2>
+        <h2>Max Year = 50 Years</h2>
+    </section>
+
+    <section id="calculator-1">
         <div class="mode">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" 
@@ -56,6 +64,82 @@
             </div>
         </div>
     </section>
+
+    <!-- calculator 2 -->
+    <section class="documentation">
+        <h1>CALCULATOR TO COUNT DATE</h1>
+        <h2>Min Date = 01/01/1940</h2>
+        <h2>Max Date = 31/12/2070</h2>
+    </section>
+
+    <section id="calculator-2">
+        <div class="mode">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+            </svg>
+        </div>
+        <div class="operasi-hasil">
+            <div class="operasi flex flex-col">
+                <div id="days" class="text-2xl">
+                    <span></span>
+                    <span class="text-blue">Days</span>
+                </div>
+                <div class="text-yellow or">
+                    <span>Or</span>
+                </div>
+                <div class="flex flex-end">
+                    <div id="months">
+                        <span></span>
+                        <span class="text-blue">Months</span>
+                    </div>
+                    <div class="text-lg text-yellow or flex items-center">
+                        <span>Or</span>
+                    </div>
+                    <div id="years">
+                        <span></span>
+                        <span class="text-blue">Years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-user">
+            <div class="grid-col-4">
+                <input type="text" class="input-date span-3" placeholder="dd/mm/yyyy">
+                <div class="now text-blue">NOW</div>
+            </div>
+            <div class="grid-col-4">
+                <input type="text" class="input-date span-3" placeholder="dd/mm/yyyy">
+                <div class="now text-blue">NOW</div>
+            </div>
+            <div class="grid-col-4">
+                <div class="text-purple checkbox">
+                    <input data-time="days" type="checkbox" checked>
+                    <span>Day</span>
+                </div>
+                <div class="text-purple checkbox">
+                    <input data-time="months" type="checkbox" checked>
+                    <span>Month</span>
+                </div>
+                <div class="text-purple checkbox">
+                    <input data-time="years" type="checkbox" checked>
+                    <span>Year</span>
+                </div>
+                <div id="or-button" class="text-purple">OR</div>
+            </div>
+            <div class="grid-col-4">
+                <div id="all" class="text-purple">OR ALL</div>
+                <div id="sum" class="text-yellow">SUM</div>
+                <div id="sum-all" class="span-2 text-yellow">SUM ALL</div>
+            </div>
+            <div class="grid-col-4">
+                <div id="reset" class="clear span-2">RESET</div>
+                <div id="output-2" class="text-xl span-2">=</div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
-
