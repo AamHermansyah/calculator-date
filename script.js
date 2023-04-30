@@ -213,6 +213,10 @@ function calculator2(){
         button.addEventListener('click', (e) => {
             let { day, month, year } = formatDate(new Date(), 'dd-mm-yyyy');
             day = day.split(', ')[1];
+
+            if (+day < 10) day = `0${day}`;
+            if (+month < 10) month = `0${month}`;
+
             button.previousElementSibling.value = `${day}/${month}/${year}`;
             input_date.forEach((input, index_input) => {
                 if(index === index_input) input.style.outline = '1px solid green';
